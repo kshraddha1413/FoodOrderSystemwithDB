@@ -1,0 +1,37 @@
+CREATE database food;
+
+use food;
+CREATE TABLE fooditems
+(id INT AUTO_INCREMENT PRIMARY KEY , 
+type VARCHAR(255) NOT NULL,
+name VARCHAR(255) NOT NULL,
+price DOUBLE );
+
+select * from fooditems;
+
+INSERT INTO fooditems(id,type,name,price) values
+(201,'Lunch','Pizza',7.50),
+(202,'Lunch','Noodles',6.50),
+(203,'Lunch','Rice Bowl',8.50);
+
+INSERT INTO fooditems(id,type,name,price) values
+(301,'Dinner','Soup',6.50),
+(302,'Dinner','Salad',5.50),
+(303,'Dinner','Pasta',9.50);
+
+*******************************************************************
+
+
+
+DELETE FROM fooditems where id >103	
+
+ALTER TABLE fooditems ADD PRIMARY KEY (name);
+
+CREATE TABLE fooditems
+(id INT AUTO_INCREMENT, 
+type VARCHAR(255) NOT NULL,
+name VARCHAR(255) NOT NULL,
+price DOUBLE NOT NULL,
+PRIMARY KEY(name));
+
+DROP table fooditems;

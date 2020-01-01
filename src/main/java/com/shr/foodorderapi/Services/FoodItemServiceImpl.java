@@ -3,7 +3,7 @@ package com.shr.foodorderapi.Services;
 import java.util.List;
 
 import com.shr.foodorderapi.DAO.FoodItemDAO;
-import com.shr.foodorderapi.Model.Employee;
+
 import com.shr.foodorderapi.Model.FoodItemDetails;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +23,7 @@ public class FoodItemServiceImpl implements FoodItemService {
 		return foodDAO.get();
 	}
 	
-	@Transactional
-	@Override
-	public List<Employee> get1() {
-
-		return foodDAO.get1();
-	}
-
+	
 	@Transactional
 	@Override
 	public FoodItemDetails get(int id) {
